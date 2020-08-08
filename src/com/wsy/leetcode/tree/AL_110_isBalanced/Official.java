@@ -10,6 +10,9 @@ public class Official {
     // TODO: 2020-08-08 00:12:09 整理 完毕！
 
     /**
+     * todo  树 要满足 某个特点，基本要求 子树 都要满足 这个特点 才行，就是 子问题！
+     * 除了 处理 左、右 子结点 --》还要 处理 左、右 子树（当成 树） ！
+     * <p>
      * https://leetcode-cn.com/problems/balanced-binary-tree/solution/ping-heng-er-cha-shu-by-leetcode/
      * <p>
      * <p>
