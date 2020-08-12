@@ -170,7 +170,7 @@ public class Official {
         TreeNode node = new TreeNode(head.val);
         node.left = leftBST;
 
-        // 链表指针 head 后移一位，开始 构建 右子树
+        // todo 当前 head 被使用了，链表指针 head 后移一位，开始 构建 右子树
         head = head.next;
 
         node.right = getBST(mid + 1, right);
