@@ -11,7 +11,8 @@ public class Official {
     }
 
     /**
-     * 反转一个数字 x
+     * todo 翻转 一个数字 x
+     * <p>
      * 其实就是 循环操作
      * （1）求模 获得最小值，保存到 reverse --》具体看下面 代码
      * （2）x / 10
@@ -60,6 +61,7 @@ public class Official {
             return true;
         }
 
+        // 不能是 负数，末尾 也不能是 0 ！
         if (x < 0 || x % 10 == 0) {
             return false;
         }
