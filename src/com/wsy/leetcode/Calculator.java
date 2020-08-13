@@ -21,27 +21,33 @@ public class Calculator {
     /**
      * todo 实现 四则运算器 ！！！
      * <p>
-     * 看人家的优秀 处理方式 --》处理 单个字符时，直接 pop ，防止 指针问题
+     * 看人家的优秀 处理方式 --》处理 单个字符时，直接 poll 删掉 ，防止 指针 不同步 问题
      * <p>
-     * 1、将 字符串 转成 字符队列
+     * 1、将 字符串 转成 字符队列 queue
      * <p>
      * 2、每次 直接 pop 出一个字符，然后处理：
-     * （1）如果是 数字 字符，就 更新 num 值
-     * --》注意，可能多个 数字字符 连一起的，所以 需要处理 数字字符串 的映射，且 注意 int 溢出问题
-     * 且，注意，不要直接 break 或者 return 等，而是 需要 继续 后面的逻辑处理
-     * （2）左括号
-     * --》开始 递归调用 --》其内部的算式 到 右括号 ，其实 就可以当成 一个 数值，更新给 num 就好了
      * <p>
-     * （3）如果 不是 数字字符，且 剔除 无用的 、非最后一位的 空格符，可以当做一个新的运算符 或者说 更新符
-     * 此时 要把之前的 "运算符 + - * / 和 数值" 做 入栈操作
+     * （1）如果是 数字 字符，就 更新 num 值
+     * --》注意，可能 多个 数字字符 连一起的，所以 需要处理 数字字符串 的映射，且 注意 int 溢出问题 --》  current  - '0' 加括号 先计算出来
+     * 且注意 --》不要 直接 break 或者 return 等，而是 需要 继续 后面的逻辑处理
+     * <p>
+     * （2）左括号 --》表示 开启了一个新的 子运算
+     * --》递归调用 --》其内部的算式 到 右括号 ，其实 就可以当成 一个 数值，更新给 num 就好了
+     *
+     * <p>
+     * （3）如果 不是 数字字符，且 剔除 无用的 且 非最后一位的 空格符，可以当做一个 新的 运算符 或者说 结果更新符
+     * todo 此次 poll后 队列空了，也要 把 之前的操作 处理入栈 ！
+     * <p>
+     * 此时 要把之前的 "运算符 + - * / 和 数值" 做 入栈操作 --》举例： * 10 + --》这里遇到了 + 操作符，先把 之前的 * 10 操作 ，处理掉 --》结果 入栈
      * --》并更新 操作符 和 num 清零
+     * <p>
      * 非数字的有， + - * / 空格 = ( ) 这么多种 情况
      * <p>
      * （4）如果是 终结符号，就 break 循环
-     * 比如 ) 、 = 、 此次 pop后 队列空了
+     * 比如 ) 和 =
      * <p>
-     * 3、跳出循环后
-     * 累加 stack 内的值 ，返回即可
+     * 3、跳出 循环后
+     * 累加 stack 内的值 ，返回 当前 方法 调用的 计算结果 ！
      */
     public static int getResult(String input) {
         if (input == null || input.length() == 0) {
@@ -51,7 +57,7 @@ public class Calculator {
         // 1、生成 字符 队列
         Queue<Character> queue = new LinkedList<>();
         for (int i = 0; i < input.length(); i++) {
-            queue.add(input.charAt(i));
+            queue.offer(input.charAt(i));
         }
 
         return getCharQueueCal(queue);
@@ -60,11 +66,11 @@ public class Calculator {
     private static int getCharQueueCal(Queue<Character> queue) {
         Stack<Integer> stack = new Stack<>();
 
-        // 2、遍历 队列，依次 pop
+        // 2、遍历 队列，依次 poll
         int num = 0;
         char op = '+';
         while (!queue.isEmpty()) {
-            // 2-1 弹出 最前面的 字符
+            // 2-1 弹出 最前面的 字符 --> 处理过的、就被 直接 删除了
             Character current = queue.poll();
 
             // 2-2 先处理 更新 数字的情况：本身是 数字字符，或者是 '(' 所代表的 优先 子运算
@@ -74,13 +80,13 @@ public class Calculator {
             }
 
             if (current == '(') {
-                // 计算 括号内 子运算 的值
+                // 开启了 子运算 ---> 计算 括号内 子运算 的值
                 // todo 操作的是 用一个queue，这样的话，指针 就不会 有 回溯问题了
                 num = getCharQueueCal(queue);
             }
 
 
-            // 2-3 再处理：遇到的是 新的、有效的 操作符（todo 或者叫 更新符） --》要 处理 旧的入栈，并更新为 新的
+            // 2-3 再处理：遇到的是 新的、有效的 操作符（todo 或者叫 结果 更新符） --》要 处理 旧的入栈，并更新为 新的
             if ((!Character.isDigit(current) && current != ' ') || queue.isEmpty()) {
 
                 // 忽略 非最后一位的空格；其他的非数字字符 都是 有效的操作符
@@ -104,7 +110,7 @@ public class Calculator {
                 num = 0;
             }
 
-            // 2-4 todo 如果 还是 提前的运算终止符 --》直接 break 循环，表示 本次方法调用，不能 再使用 和 修改 stack了
+            // 2-4 todo 如果 还是 提前的 运算终止符 --》直接 break 循环，表示 本次方法调用，不能 再使用 和 修改 queue 了
             if (current == ')' || current == '=') {
                 break;
             }
@@ -124,7 +130,7 @@ public class Calculator {
 
 
     /**
-     * todo md 这代码 写的 漏洞百出 --》错误 代码！
+     * todo md 这代码 写的 漏洞百出 --》错误 代码 ============================================
      * 如果只是 原数组，加 index 偏移计算，实际上 边界 不好控制
      * 因为 你用过的字符 还在原数组，实际上 这样 可能导致 指针 已经 运算过了 这些字符，
      * 但是 忘记 更新指针，导致 重复 计算。
