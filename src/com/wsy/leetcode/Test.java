@@ -15,10 +15,17 @@ public class Test {
 
 //        test3();
 
-        test4();
+//        test4();
 
+        test5();
 
+    }
 
+    private static void test5() {
+
+        boolean b = null instanceof Integer;
+        boolean b1 = null instanceof Object;
+        System.out.println("null instanceof = " + b + " - " + b1);
     }
 
     private static void test4() {
