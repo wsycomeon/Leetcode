@@ -1,0 +1,231 @@
+"C:\Program Files\Java\jdk1.8.0_60\bin\java.exe" -javaagent:C:\DevTool\IntelliJ\lib\idea_rt.jar=54862:C:\DevTool\IntelliJ\bin -Dfile.encoding=UTF-8 -classpath "C:\Program Files\Java\jdk1.8.0_60\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\deploy.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\ext\cldrdata.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\ext\jaccess.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\ext\jfxrt.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\ext\nashorn.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\ext\sunec.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\ext\zipfs.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\javaws.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jfxswt.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\management-agent.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\plugin.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\rt.jar;C:\AndroidStudioProjects\Github\Leetcode\out\production\Leetcode" com.wsy.utils.MapParser
+absolutePath = C:\AndroidStudioProjects\Github\Leetcode\file
+3014: com.jamdeo.tv.vod
+Address    Kbytes     PSS   Dirty    Swap  Mode  Mapping
+total    2517188  355588  280580       0
+zeroList size = 3241
+noneZeroList size = 1273
+========================= PSS = 0  START ========================= 
+large unknown file = Section{Address= 'e4288000', Kbytes= 7112, PSS= 0, Dirty= 0, Swap= 0, Mode= r--s-, Mapping= 'NotoColorEmoji.ttf'}
+large unknown = Section{Address= 'ec600000', Kbytes= 1024, PSS= 0, Dirty= 0, Swap= 0, Mode= rw---, Mapping= 'non moving space mark-bitmap 0 (deleted)'}
+large unknown = Section{Address= 'ec700000', Kbytes= 1024, PSS= 0, Dirty= 0, Swap= 0, Mode= rw---, Mapping= 'non moving space live-bitmap 0 (deleted)'}
+
+totalKbytes = 1374660k [ anon = 163220k, dalvik = 1140696k,  fileSize = 64968k ( odex = 600, vdex = 0, so = 33944, apk = 684, jar = 6032, art = 0, oat = 8, otherFile = 23700 ), unknown = 5776k ]
+========================= PSS = 0  END ========================= 
+
+========================= PSS != 0  START ========================= 
+large unknown file = Section{Address= 'a4330000', Kbytes= 2344, PSS= 136, Dirty= 136, Swap= 0, Mode= rw-s-, Mapping= '1629447028008tts.pcm (deleted)'}
+large unknown file = Section{Address= 'e1072000', Kbytes= 22776, PSS= 539, Dirty= 0, Swap= 0, Mode= r--s-, Mapping= 'icudt58l.dat'}
+large unknown file = Section{Address= 'e26b0000', Kbytes= 18240, PSS= 5559, Dirty= 0, Swap= 0, Mode= r--s-, Mapping= 'NotoSansCJK-Regular.ttc'}
+large unknown file = Section{Address= 'ed0f0000', Kbytes= 300, PSS= 172, Dirty= 0, Swap= 0, Mode= r--s-, Mapping= 'Roboto-Bold.ttf'}
+
+calculateSectionMap map size = 237339k
+
+calculateSectionMap map size = 37242k
+
+calculateSectionMap map size = 80744k
+
+======== totalPss = 355588k
+
+anon = 237339k ,anonMap size = 11
+	[anon:.bss] = 1316k
+	[anon:linker_alloc_lob] = 4k
+	[anon:linker_alloc_small_objects] = 48k
+	[anon] = 6384k
+	[anon:atexit handlers] = 260k
+	[anon:linker_alloc_vector] = 28k
+	[anon:bionic TLS] = 44k
+	[anon:arc4random data] = 8k
+	[anon:linker_alloc] = 164k
+	[anon:thread signal stack] = 4k
+	[anon:libc_malloc] = 229079k
+
+dalvik = 37242k ,dalvikMap size = 13
+	dalvik-large live objects (deleted) = 28k
+	dalvik-indirect ref table (deleted) = 788k
+	dalvik-Jit thread pool worker thread 0 (deleted) = 8k
+	dalvik-zygote space (deleted) = 120k
+	dalvik-card table (deleted) = 48k
+	dalvik-data-code-cache (deleted) = 3468k
+	dalvik-large object space allocation (deleted) = 1866k
+	dalvik-allocspace non moving space live-bitmap 1 (deleted) = 4k
+	dalvik-main space (region space) (deleted) = 18484k
+	dalvik-non moving space (deleted) = 256k
+	dalvik-LinearAlloc (deleted) = 7560k
+	dalvik-jit-code-cache (deleted) = 4608k
+	dalvik-mod union bitmap (deleted) = 4k
+
+file = 80744k ,fileMap size = 159
+	odex = 666k
+	vdex = 36177k
+	so = 30015k
+	apk = 1001k
+	jar = 2272k
+	art = 3629k
+	oat = 380k
+	otherFile = 6604k
+
+	libwasuauth.so = 8k
+	libtil_pvr.so = 8k
+	libprocessgroup.so = 4k
+	libmarsxlog.so = 104k
+	Plugin_Component_Common-10-10-1 = 72k
+	libfbdev.so = 8k
+	libuniversal_foundation.so = 188k
+	libNativeUtil.so = 8k
+	system@framework@boot.oat = 380k
+	libexif.so = 1k
+	libqtpclient.so = 344k
+	libsync.so = 4k
+	libpcre2.so = 1k
+	libhwbinder.so = 9k
+	libPlayerCore_neon.so = 152k
+	libjpeg.so = 226k
+	core-oj.jar = 4k
+	pluginsdkplayer-release-1.1008.1.03488.odex = 8k
+	libhitvwrapper.so = 10k
+	libion.so = 8k
+	libuniplayerdata.so = 132k
+	libAudiocnloop.so = 8k
+	unisdk_player.odex = 100k
+	libffmpegJni.so = 116k
+	libtil_factory.so = 8k
+	system@framework@boot.vdex = 7643k
+	libtil_source.so = 8k
+	Plugin_Basic-10-10-1 = 208k
+	libc.so = 13k
+	base.apk = 771k
+	framework-res.apk = 230k
+	libstagefright_foundation.so = 6k
+	libstagefright.so = 7k
+	libmedia.so = 124k
+	libtlcyAudioPlayMS.so = 108k
+	Plugin_Component_HiSing-10-10-1 = 1168k
+	libmedia_jni.so = 162k
+	libcupid.so = 32k
+	libGLESv2.so = 11k
+	libdns.so = 352k
+	base.odex = 382k
+	libandroid.so = 20k
+	libsqlite.so = 59k
+	NotoSansCJK-Regular.ttc = 5559k
+	libvixl-arm.so = 34k
+	libtil_ci.so = 8k
+	libskia.so = 1059k
+	libminikin.so = 7k
+	libc++.so = 9k
+	libGLESv1_CM.so = 8k
+	libhwui.so = 140k
+	til.default.so = 8k
+	Plugin_UnifiedSDK_third_tlkg-10-10-1 = 208k
+	libselinux.so = 1k
+	libgalauniplayersdk_jni.so = 76k
+	libinput.so = 6k
+	libutopia.so = 2k
+	Plugin_Component_Rights-10-10-1 = 868k
+	icudt58l.dat = 570k
+	libssl.so = 9k
+	Roboto-Bold.ttf = 172k
+	libutils.so = 10k
+	Plugin_UnifiedSDK_third_qiyi-10-10-1 = 216k
+	Plugin_Component_HomePage-10-10-1 = 2256k
+	libGLES_mali.so = 13010k
+	libm.so = 1k
+	1629447028008tts.pcm (deleted) = 136k
+	libmediametrics.so = 4k
+	vod_share_data.db (deleted) = 2k
+	libgui.so = 17k
+	libandroidfw.so = 12k
+	libvndksupport.so = 4k
+	libmediautils.so = 4k
+	libpdfium.so = 1k
+	libtvservicesframework_jni.so = 13k
+	libAudiocnAudioUtil.so = 8k
+	Plugin_UnifiedSDK_third_wasu-10-10-1 = 992k
+	pluginsdkplayer-release-1.1008.1.03488.vdex = 40k
+	libart-compiler.so = 51k
+	libEGL.so = 18k
+	NotoSansLaoUI-Regular.ttf = 32k
+	system@framework@boot.art = 3629k
+	libLocalServer.so = 512k
+	libtil_picture.so = 8k
+	libAudiocnTools.so = 16k
+	libvulkan.so = 4k
+	libharfbuzz_ng.so = 63k
+	Plugin_Component_UserData-10-10-1 = 212k
+	Plugin_Component_Entertainment-10-10-1 = 184k
+	libAudiocnSoundtouch.so = 12k
+	libgalauniplayersdk.so = 452k
+	libBeacon.so = 8k
+	libmonalisa.so = 8k
+	unisdk.vdex = 1204k
+	libOpenSLES.so = 16k
+	Roboto-Regular.ttf = 93k
+	libjnigraphics.so = 3k
+	libtv-ticket-tool.so = 56k
+	libnativeloader.so = 4k
+	libuniversal_api.so = 428k
+	libjavacore.so = 7k
+	libsingScore.so = 12k
+	libTxCodec_neon.so = 396k
+	gralloc.m7221.so = 12k
+	libtil_audio.so = 19k
+	libckeygenerator.so = 104k
+	libgnustl_shared.so = 396k
+	libMixed.so = 12k
+	libhproxy.so = 2972k
+	libgalauniffmpeg.so = 140k
+	libfingerprint.so = 8k
+	unisdk_player.vdex = 3352k
+	libhstvclient.so = 23k
+	libz.so = 1k
+	libstagefright_omx_utils.so = 4k
+	libpng.so = 18k
+	libuniversal_nd.so = 60k
+	libgalauniutil.so = 112k
+	libsensor.so = 4k
+	libp2pproxy.so = 1020k
+	Plugin_Component_Member-10-10-1 = 108k
+	libAudiocnMP4codec.so = 24k
+	Plugin_Component_Edu-10-10-1 = 452k
+	libCube.so = 12k
+	log.mmap2 = 40k
+	Plugin_UnifiedSDK_third_tencent-10-10-1 = 708k
+	libhidltransport.so = 4k
+	libft2.so = 83k
+	libart.so = 194k
+	libcutils.so = 4k
+	libAudiocnAudiocodec.so = 8k
+	libstdc++.so = 1k
+	base.vdex = 12246k
+	libui.so = 15k
+	libopenjdk.so = 12k
+	libcrypto.so = 28k
+	libtil_system.so = 10k
+	libwilhelm.so = 64k
+	unisdk.odex = 32k
+	libtil_atv.so = 8k
+	libjavacrypto.so = 3k
+	libtil_dtv.so = 8k
+	libtil_different.so = 8k
+	libnativehelper.so = 4k
+	libmctocurl.so = 508k
+	libandroid_runtime.so = 147k
+	libmsc.so = 924k
+	libHCDNClientNet.so = 2572k
+	libtvjson.so = 48k
+	libicuuc.so = 81k
+	libmicrohttpd.so = 8k
+	Plugin_Component_Vod-10-10-1 = 4772k
+	libImSDK.so = 1480k
+	libicui18n.so = 14k
+	Plugin_Component_Sport-10-10-1 = 1680k
+	libhs_render.so = 8k
+	libbinder.so = 27k
+	libaudioclient.so = 25k
+	liblog.so = 4k
+
+unknown = 263k
+========================= PSS != 0  END ========================= 
+
+Process finished with exit code 0
